@@ -1,6 +1,1 @@
-export function twoFer(name?: string): string {
-  if (name === undefined) {
-    name = 'you';
-  }
-  return `One for ${name}, one for me.`
-}
+export const twoFer = (name = 'you'): string => `One for ${name}, one for me.`
