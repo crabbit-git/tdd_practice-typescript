@@ -11,4 +11,9 @@ export const COLORS = [
   'white'
 ];
 
-export const colorCode = (color: string): number => COLORS.indexOf(color);
+export const colorCode = (color: string): number => {
+  if (!COLORS.includes(color)) {
+    throw new Error("Invalid color submitted");
+  }
+  return COLORS.indexOf(color);
+}
